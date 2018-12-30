@@ -16,7 +16,7 @@ import UIKit
 class ChangeCityViewController: UIViewController {
     
     //Declare the delegate variable here:
-
+    
     
     //This is the pre-linked IBOutlets to the text field:
     @IBOutlet weak var changeCityTextField: UITextField!

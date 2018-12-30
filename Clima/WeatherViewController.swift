@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CoreLocation // MA - This is the Apple library that needs to be imported if you want to work with locations
 
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, CLLocationManagerDelegate {
+    // the class 'WeatherViewController' needs to conform to 'CLLocationManagerDelegate' for this class to be able to handle Location related jobs.
+    
     
     //Constants
     let WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather"
@@ -17,7 +20,7 @@ class WeatherViewController: UIViewController {
     
 
     //TODO: Declare instance variables here
-    
+    let locationManager = CLLocationManager() // creating an object of the class 'CLLocationManager'. This object has all the properties Apple has coded into the CLLocationManager Class.
 
     
     //Pre-linked IBOutlets
@@ -31,7 +34,15 @@ class WeatherViewController: UIViewController {
         
         
         //TODO:Set up the location manager here.
-    
+        
+        locationManager.delegate = self
+        // We are setting the class 'WeatherViewController' (denoted here by the keyword self) as the delegate of the object 'locationManager' (which is of the class CLLocationManager). This has to be done so 'WeatherViewController can let the universe know its CLLocationManager handling capabilities
+       
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        // This property set the accuracy of the location data. More accuracy = more battery
+        
+        locationManager.requestWhenInUseAuthorization()
+        // This property ask the user for permission to use thier location.
         
         
     }
