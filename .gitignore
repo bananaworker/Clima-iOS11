@@ -1,0 +1,87 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @bananaworker Sign out
+0
+5 8 kennyma/gitignore
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights
+gitignore/.gitignore
+d728406  on 2 Oct 2011
+@kennyma kennyma Updated _ReSharper folder exclusion.
+     
+58 lines (49 sloc)  432 Bytes
+# OS
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# compiled 
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# package
+*.apk
+*.iso
+*.ipa
+*.jar
+*.war
+
+# xcode
+*.swp
+*~.nib
+build/
+*.pbxuser
+*.perspective
+*.perspectivev3
+xcuserdata
+
+# eclipse
+.classpath
+.project
+.settings
+
+#android
+bin
+gen
+*.apk
+*.ap_
+*.dex
+
+# logs
+*.log
+
+# RoR
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+
+# .Net & Visual Studio
+_ReSharper.*
+*.resharper
+*.resharper.user
+*.csproj.user
+© 2018 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Press h to open a hovercard with more details.
